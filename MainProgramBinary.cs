@@ -2,7 +2,7 @@
 
 namespace ToBinary
 {
-    class Program
+    class MainProgramBinary
     {
         static void Main(string[] args)
         {   
@@ -10,7 +10,7 @@ namespace ToBinary
             Console.WriteLine("Enter the Number to convert to Binary"  );
             n = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("The binary Equivalent is " + BinaryConversion.ToBinary(n));
+            BinaryConversion.ToBinary(n);
             
             
             Console.ReadLine();
