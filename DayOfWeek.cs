@@ -6,17 +6,9 @@ namespace DaysOfWeek
 {
     class DayOfWeek
     {
-        public static void daysOfWeek()
+        public static void DaysOfWeek(int m,int d,int y)
         {
-            int m, d, y;
-
-            Console.Write("Enter month [ 1-12 :: Jan-Dec ] ");
-            m = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter day: ");
-            d = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter year in yyyy format: ");
-            y = Convert.ToInt32(Console.ReadLine());
-
+           
             if (m <= 12 && d <= 31 && d != 0)
             {
                 int y0 = y - (14 - m) / 12;
