@@ -6,38 +6,29 @@ namespace ToBinary
 {
     class BinaryConversion
     {
-        public static string ToBinary(int n)
-        { string binvalue=" ";
-            int Length;
+        public static void ToBinary(int n)
+        {
+            int[] binvalue = new int[n];
+            int i=0;
 
-            while (n >= 1)
+            while (n > 0)
             {
-              
-                int remainder = n % 2;
+                binvalue[i] = (n % 2);
                 n = n / 2;
-
-                binvalue += Convert.ToString(remainder);            //storing the remainders as string
-
-               
-
+                i++;
+              
             }
-                #region                                                        
-            string Revbinvalue = " ";                            //to reverse the string as the binary equivalent is opposite
-
-            Length = binvalue.Length - 1;
-
-            while (Length >= 0)                //loops the given string length
+            #region                                                     //for printing in reverse order, 
+            Console.WriteLine("The binary Equivalent is ");                                                         //as binary code is the opposite order of remainders obtained                                            
+            for (int k=i-1;k >=0; k--)
             {
-
-                Revbinvalue = Revbinvalue + binvalue[Length];  //performimg a reverse string according to length of given string
-                Length--;
-
+                Console.Write(+binvalue[k]);
             }
+
+
             #endregion                                                      
 
-            return Revbinvalue;         //returning the reversed string
-
-          
+ 
         } 
 
 
